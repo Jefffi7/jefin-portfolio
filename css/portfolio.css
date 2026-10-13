@@ -1,0 +1,225 @@
+:root {
+  --portfolio-ink: #172b4d;
+  --portfolio-muted: #64748b;
+  --portfolio-accent: #087e8b;
+  --portfolio-accent-soft: #e8f5f5;
+  --portfolio-line: #e5eaf0;
+  --portfolio-surface: #ffffff;
+}
+
+html { scroll-behavior: smooth; }
+body { color: #465568; background: #f8fafc; }
+#colorlib-aside {
+  background: #f1f6f7;
+  border-right: 1px solid #e3eaee;
+  box-shadow: 8px 0 28px rgba(23, 43, 77, .035);
+}
+#colorlib-aside .author-img {
+  border: 5px solid #fff;
+  box-shadow: 0 12px 32px rgba(23, 43, 77, .12);
+}
+#colorlib-aside #colorlib-logo a { color: var(--portfolio-ink); }
+#colorlib-aside > .text-center > span {
+  color: var(--portfolio-muted);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+#colorlib-aside #colorlib-main-menu ul li.active a { color: var(--portfolio-accent); }
+#colorlib-aside #colorlib-main-menu ul li a:after { background: var(--portfolio-accent); }
+#colorlib-aside .colorlib-footer ul li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  color: var(--portfolio-ink);
+  background: #fff;
+  border: 1px solid var(--portfolio-line);
+  border-radius: 50%;
+  margin: 0 4px;
+}
+#colorlib-aside .colorlib-footer ul li a:hover { color: #fff; background: var(--portfolio-accent); }
+
+#colorlib-main { background: #fff; }
+.colorlib-narrow-content { max-width: 940px; }
+.colorlib-heading {
+  color: var(--portfolio-ink);
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 28px;
+}
+.heading-meta {
+  color: var(--portfolio-accent);
+  font-weight: 700;
+  letter-spacing: .14em;
+}
+.colorlib-about, .colorlib-services, .colorlib-skills,
+.colorlib-education, .colorlib-experience, .colorlib-work, .colorlib-contact {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+#colorlib-hero .overlay {
+  background: rgba(10, 24, 42, .48);
+}
+#colorlib-hero .slider-text-inner .desc {
+  max-width: 680px;
+  padding: 28px 30px;
+  border-left: 4px solid #51c5c8;
+  background: rgba(10, 24, 42, .32);
+  backdrop-filter: blur(3px);
+}
+#colorlib-hero .slider-text-inner h1 {
+  font-size: clamp(42px, 5vw, 64px);
+  line-height: 1.08;
+  margin-bottom: 18px;
+}
+#colorlib-hero .slider-text-inner h2 {
+  color: rgba(255,255,255,.94);
+  font-size: 20px;
+  line-height: 1.55;
+  max-width: 620px;
+}
+.btn-primary {
+  background: var(--portfolio-accent);
+  border-color: var(--portfolio-accent);
+  border-radius: 3px;
+  letter-spacing: .04em;
+  padding: 13px 20px;
+}
+.btn-primary:hover, .btn-primary:focus { background: #066873; border-color: #066873; }
+
+.about-desc p, .colorlib-skills p, .colorlib-contact p {
+  max-width: 760px;
+  color: #526174;
+  font-size: 16px;
+  line-height: 1.85;
+}
+.colorlib-about .services,
+.colorlib-services .services {
+  min-height: 190px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(23, 43, 77, .07);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.colorlib-about .services:hover, .colorlib-services .services:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(23, 43, 77, .12);
+}
+.colorlib-services .services { padding: 28px 22px; }
+.colorlib-services .services h3 { color: var(--portfolio-ink); }
+.colorlib-services .services p { color: var(--portfolio-muted); }
+
+.skill-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+.skill-list li {
+  padding: 16px 18px;
+  border: 1px solid var(--portfolio-line);
+  border-radius: 6px;
+  background: #fbfcfd;
+}
+.skill-list strong { color: var(--portfolio-ink); }
+
+.education-card, .experience-card {
+  padding: 30px 34px;
+  border: 1px solid var(--portfolio-line);
+  border-radius: 8px;
+  background: var(--portfolio-surface);
+  box-shadow: 0 12px 32px rgba(23, 43, 77, .055);
+}
+.education-card h3, .experience-card h3 {
+  color: var(--portfolio-ink);
+  font-size: 23px;
+  margin: 8px 0;
+}
+.education-card p, .experience-card p { max-width: 760px; }
+.education-card__eyebrow, .experience-card__eyebrow {
+  color: var(--portfolio-accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.education-card__school, .experience-card__company {
+  color: var(--portfolio-muted);
+  font-weight: 600;
+}
+.experience-card {
+  display: grid;
+  grid-template-columns: 14px 1fr;
+  gap: 20px;
+}
+.experience-card__marker {
+  width: 12px;
+  height: 12px;
+  margin-top: 8px;
+  background: #3db6b8;
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px var(--portfolio-accent-soft);
+}
+
+.project-feature {
+  padding: clamp(24px, 5vw, 48px);
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f1f8f8, #f8fafc 65%);
+  border: 1px solid #dcebed;
+}
+.project-feature__intro {
+  max-width: 720px;
+  color: var(--portfolio-ink);
+  font-size: 19px;
+  line-height: 1.7;
+}
+.project-feature__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 30px 0 22px;
+}
+.project-feature__grid > div {
+  padding: 22px;
+  background: #fff;
+  border: 1px solid var(--portfolio-line);
+  border-radius: 7px;
+}
+.project-feature__grid span {
+  color: var(--portfolio-accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+.project-feature__grid h3 {
+  margin: 10px 0 6px;
+  color: var(--portfolio-ink);
+  font-size: 19px;
+}
+.project-feature__grid p { margin: 0; color: var(--portfolio-muted); }
+.project-feature__note { color: var(--portfolio-muted); font-size: 13px; margin: 0; }
+
+.colorlib-contact a { color: var(--portfolio-accent); }
+.colorlib-contact a:hover { color: #055f69; }
+a:focus-visible, button:focus-visible {
+  outline: 3px solid #f5b942;
+  outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .colorlib-about, .colorlib-services, .colorlib-skills,
+  .colorlib-education, .colorlib-experience, .colorlib-work, .colorlib-contact {
+    padding-top: 3.5em;
+    padding-bottom: 3.5em;
+  }
+  #colorlib-hero .slider-text-inner .desc { margin: 0 14px; padding: 22px; }
+  #colorlib-hero .slider-text-inner h2 { font-size: 17px; }
+  .skill-list, .project-feature__grid { grid-template-columns: 1fr; }
+  .education-card, .experience-card { padding: 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
